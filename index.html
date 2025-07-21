@@ -4,26 +4,68 @@
     <meta charset="UTF-8">
     <title>html element example</title>
     <script>
-        const video = document.getElementById("myVideo");
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById("myVideo");
+            const audio1 = document.getElementById("audio-1");
+            document.getElementById("playButton").addEventListener("click", () =>{
+                playVideo(video);
+            })
+            document.getElementById("pauseButton").addEventListener("click", () =>{
+                pauseVideo(video);
+            })
+            document.getElementById("playButton-2").addEventListener("click", () =>{
+                playVideo(audio1);
+            })
+            document.getElementById("pauseButton-2").addEventListener("click", () =>{
+                pauseVideo(audio1);
+            })
 
-        function playVideo() {
-            video.play(); // starts video playback
+
+        })
+        function playVideo(media) {
+            media.play(); // starts video playback
         }
 
-        function pauseVideo() {
-            video.pause(); // pauses video playback
+        function pauseVideo(media) {
+            media.pause(); // pauses video playback
         }
+
     </script>
+    <style>
+        #video-div{
+            display: flex;
+            flex-direction: column;
+        }
+        #buttons-1{
+            display: flex;
+            justify-items: center;
+        }
+    </style>
 </head>
 <body>
-<div>
+<div id="video-div">
     <video id="myVideo" width="400" controls>
-        <source src="C://Users/Public/Documents/JavaAcademy2025_public/javascript-gabriel/static/video1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+        <source src="https://file-examples.com/storage/fe99c434516877eeba0dbef/2017/04/file_example_MP4_480_1_5MG.mp4" type="video/mp4">
+
     </video>
 
-    <button onclick="playVideo()">Play</button>
-    <button onclick="pauseVideo()">Pause</button>
+    <div id="buttons-1">
+        <button id="playButton">Play</button>
+        <button id="pauseButton">Pause</button>
+
+    </div>
+</div>
+<div id="audio-div">
+    <audio id="audio-1" controls>
+        <source src="resources/mp3-sample-1.mp3" type="audio/mp3">
+
+    </audio>
+
+    <div id="buttons-2">
+        <button id="playButton-2">Play</button>
+        <button id="pauseButton-2">Pause</button>
+
+    </div>
 </div>
 </body>
 </html>
