@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html element example</title>
+    <script>
+        const video = document.getElementById("myVideo");
+
+        function playVideo() {
+            video.play(); // starts video playback
+        }
+
+        function pauseVideo() {
+            video.pause(); // pauses video playback
+        }
+    </script>
+</head>
+<body>
+<div>
+    <video id="myVideo" width="400" controls>
+        <source src="C://Users/Public/Documents/JavaAcademy2025_public/javascript-gabriel/static/video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <button onclick="playVideo()">Play</button>
+    <button onclick="pauseVideo()">Pause</button>
+</div>
+</body>
+</html>
