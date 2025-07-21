@@ -2,26 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>html element example</title>
+    <title>html media element - examples</title>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const video = document.getElementById("myVideo");
             const audio1 = document.getElementById("audio-1");
-            document.getElementById("playButton").addEventListener("click", () =>{
+            document.getElementById("playButton").addEventListener("click", () => {
                 playVideo(video);
             })
-            document.getElementById("pauseButton").addEventListener("click", () =>{
+            document.getElementById("pauseButton").addEventListener("click", () => {
                 pauseVideo(video);
             })
-            document.getElementById("playButton-2").addEventListener("click", () =>{
+            document.getElementById("playButton-2").addEventListener("click", () => {
                 playVideo(audio1);
             })
-            document.getElementById("pauseButton-2").addEventListener("click", () =>{
+            document.getElementById("pauseButton-2").addEventListener("click", () => {
                 pauseVideo(audio1);
             })
 
 
         })
+
         function playVideo(media) {
             media.play(); // starts video playback
         }
@@ -32,40 +33,118 @@
 
     </script>
     <style>
-        #video-div{
+        body {
+            color: lightgray;
+            background-color: #303030;
+            font-family: sans-serif;
+        }
+        #text-div{
             display: flex;
             flex-direction: column;
         }
-        #buttons-1{
+        #main-div {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #media-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .video-description{
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+        .flex-item {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #buttons-1 {
             display: flex;
             justify-items: center;
+        }
+
+        .media-button {
+            border-radius: 30%;
+            border: 2px solid whitesmoke;
+            margin-right: 3px;
         }
     </style>
 </head>
 <body>
-<div id="video-div">
-    <video id="myVideo" width="400" controls>
-        <source src="https://file-examples.com/storage/fe99c434516877eeba0dbef/2017/04/file_example_MP4_480_1_5MG.mp4" type="video/mp4">
+<div id="main-div">
 
-    </video>
-
-    <div id="buttons-1">
-        <button id="playButton">Play</button>
-        <button id="pauseButton">Pause</button>
-
-    </div>
-</div>
-<div id="audio-div">
-    <audio id="audio-1" controls>
-        <source src="resources/mp3-sample-1.mp3" type="audio/mp3">
-
-    </audio>
-
-    <div id="buttons-2">
-        <button id="playButton-2">Play</button>
-        <button id="pauseButton-2">Pause</button>
+    <div id="text-div">
+        <header>HTML Media Element (audio and video)</header>
+        <div class="video-description">
+            <p><em>The &lt;video&gt; HTML element embeds a media player which supports video playback into the document.</em></p>
+            <p>Note: The &lt;video&gt; HTML element  can be used to play audio files, too</p>
+            <p> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video">source</a></p>
+        </div>
+        <div class="audio-description">
+            <p><em>The &lt;audio&gt; element is used to embed sound content in documents.<br> It may contain one or more audio sources, represented using the src attribute or the &lt;source&gt; element:</em></p>
+            <p>Note: The &lt;video&gt; HTML element  can be used to play audio files, too</p>
+            <p> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/audio">source</a></p>
+        </div >
+        <div class="video-description">
+            <p>Several HTML attributes are avaialble for the &lt;video&gt; and &lt;audio&gt; elements</p>
+            <p>For example, "loop" and "autoplay"</p>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video">source</a></p>
+        </div>
 
     </div>
+    <div id="media-div">
+        <div id="video-div" class="flex-item">
+            <video id="myVideo" width="400" controls>
+                <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                        type="video/mp4">
+
+            </video>
+
+            <div id="buttons-1">
+                <button id="playButton" class="media-button">Play</button>
+                <button id="pauseButton" class="media-button">Pause</button>
+
+            </div>
+        </div>
+        <div id="audio-div" class="flex-item">
+            <audio id="audio-1" controls>
+                <source src="resources/mp3-sample-1.mp3" type="audio/mp3">
+
+            </audio>
+
+            <div id="buttons-2">
+                <button id="playButton-2" class="media-button">Play</button>
+                <button id="pauseButton-2" class="media-button">Pause</button>
+
+            </div>
+        </div>
+        <div id="video-div-2" class="flex-item">
+            <video id="loopVideo" width="400" loop autoplay>
+                <source src="https://file-examples.com/storage/fe99c434516877eeba0dbef/2017/04/file_example_MP4_480_1_5MG.mp4"
+                        type="video/mp4">
+
+            </video>
+
+            <div id="buttons-3">
+                <button id="playButton-3" class="media-button">Play</button>
+                <button id="pauseButton-3" class="media-button">Pause</button>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
 </div>
+
 </body>
 </html>
+
+<!--
+http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4-->
