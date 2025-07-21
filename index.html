@@ -40,10 +40,15 @@
         background-color: #303030;
         font-family: sans-serif;
     }
-    #text-div{
+    header{
+        text-align: center;
+    }
+
+    #text-div {
         display: flex;
         flex-direction: column;
     }
+
     #main-div {
         display: flex;
         justify-content: space-around;
@@ -55,9 +60,10 @@
         align-items: center;
         margin-top: 10px;
     }
-    .video-description{
-        margin-top: 80px;
-        margin-bottom: 80px;
+
+    .video-description {
+        margin-top: 60px;
+        margin-bottom: 60px;
     }
 
     .flex-item {
@@ -75,25 +81,32 @@
         border: 2px solid whitesmoke;
         margin-right: 3px;
     }
+    li{
+        margin-bottom: 5px;
+    }
 </style>
 <body>
+<header><h1>HTML Media Element (audio and video)</h1></header>
 <div id="main-div">
 
     <div id="text-div">
-        <header>HTML Media Element (audio and video)</header>
+
         <div class="video-description">
-            <p><em>The &lt;video&gt; HTML element embeds a media player which supports video playback into the document.</em></p>
-            <p>Note: The &lt;video&gt; HTML element  can be used to play audio files, too</p>
-            <p> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video">source</a></p>
+            <p><em>The &lt;video&gt; HTML element embeds a media player which supports video playback into the
+                document.</em></p>
+            <p>Note: The &lt;video&gt; HTML element can be used to play audio files, too</p>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video">source</a></p>
         </div>
         <div class="audio-description">
-            <p><em>The &lt;audio&gt; element is used to embed sound content in documents.<br> It may contain one or more audio sources, represented using the src attribute or the &lt;source&gt; element:</em></p>
-            <p>Note: The &lt;video&gt; HTML element  can be used to play audio files, too</p>
-            <p> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/audio">source</a></p>
-        </div >
+            <p><em>The &lt;audio&gt; element is used to embed sound content in documents.<br> It may contain one or more
+                audio sources, represented using the src attribute or the &lt;source&gt; element:</em></p>
+            <p>Note: The &lt;video&gt; HTML element can be used to play audio files, too</p>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/audio">source</a></p>
+        </div>
         <div class="video-description">
             <p>Several HTML attributes are avaialble for the &lt;video&gt; and &lt;audio&gt; elements</p>
-            <p>For example, "loop" and "autoplay"</p>
+            <p>For example, "loop" and "autoplay" (alongside "muted")</p>
+            <p>Note: Some browsers require the <i>"muted"</i> attribute to have the video start automatically.</p>
             <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video">source</a></p>
         </div>
 
@@ -131,16 +144,32 @@
 
             </video>
             <div id="buttons-3">
-<!--                <button id="playButton-3" class="media-button">Play</button>-->
-<!--                <button id="pauseButton-3" class="media-button">Pause</button>-->
-
+                <!--                <button id="playButton-3" class="media-button">Play</button>-->
+                <!--                <button id="pauseButton-3" class="media-button">Pause</button>-->
             </div>
         </div>
-
-
     </div>
-
-
+</div>
+<div id="additional-info">
+    <div id="video-elt-info">
+        <h3>Further Attributes of the video and audio element:</h3>
+        <ul>
+            <li>controls</li>
+            <li>controlslist</li>
+            <li>crossorigin</li>
+            <li>anonymous</li>
+            <li>use-credentials</li>
+            <li>disablepictureinpicture</li>
+            <li>disableremoteplayback</li>
+            <li>height</li>
+            <li>playsinline</li>
+            <li>poster</li>
+            <li>preload</li>
+            <li>src</li>
+            <li>width (only for video element)</li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video#attributes">source</a>
+        </ul>
+    </div>
 </div>
 
 </body>
