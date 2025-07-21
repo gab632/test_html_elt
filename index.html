@@ -32,49 +32,50 @@
         }
 
     </script>
-    <style>
-        body {
-            color: lightgray;
-            background-color: #303030;
-            font-family: sans-serif;
-        }
-        #text-div{
-            display: flex;
-            flex-direction: column;
-        }
-        #main-div {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        #media-div {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 10px;
-        }
-        .video-description{
-            margin-top: 80px;
-            margin-bottom: 80px;
-        }
-
-        .flex-item {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        #buttons-1 {
-            display: flex;
-            justify-items: center;
-        }
-
-        .media-button {
-            border-radius: 30%;
-            border: 2px solid whitesmoke;
-            margin-right: 3px;
-        }
-    </style>
 </head>
+<style>
+    body {
+        color: lightgray;
+        /*background-image: url("resources/movie-camera.jpg");*/
+        background-color: #303030;
+        font-family: sans-serif;
+    }
+    #text-div{
+        display: flex;
+        flex-direction: column;
+    }
+    #main-div {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #media-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .video-description{
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    .flex-item {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #buttons-1 {
+        display: flex;
+        justify-items: center;
+    }
+
+    .media-button {
+        border-radius: 30%;
+        border: 2px solid whitesmoke;
+        margin-right: 3px;
+    }
+</style>
 <body>
 <div id="main-div">
 
@@ -124,7 +125,7 @@
             </div>
         </div>
         <div id="video-div-2" class="flex-item">
-            <video id="loopVideo" width="400" loop autoplay>
+            <video id="loopVideo" width="400" loop autoplay muted>
                 <source src="https://file-examples.com/storage/fe99c434516877eeba0dbef/2017/04/file_example_MP4_480_1_5MG.mp4"
                         type="video/mp4">
 
